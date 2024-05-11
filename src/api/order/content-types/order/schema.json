@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ordercode": {
+      "type": "string",
+      "required": true,
+      "maxLength": 9,
+      "unique": true,
+      "minLength": 9,
+      "default": "SAW"
+    },
+    "Orderstatus": {
+      "type": "enumeration",
+      "enum": [
+        "Order received",
+        "Processing",
+        "Shipped",
+        "On the way",
+        "Order Delivered"
+      ],
+      "default": "Order received",
+      "required": true
+    }
+  }
+}
